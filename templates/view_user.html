@@ -1,0 +1,16 @@
+{% include 'header.html' %}
+<body>
+  <div class="container-fluid" id="main">
+  {% include 'top_menus.html' %}
+      <div class=main justify-content-center text-center align-items-center">
+		<h3 class="fw-bold text-black-50">User Details</h3>
+		<br>
+		<h4>{{user.first_name}}</h4>
+		<p><strong>Email: </strong> {{user.email}}. </p>
+		<p><strong>Role: </strong> {{user.role}} </p>       
+        <hr>         
+       </div>       
+      </div>     
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+    <nav class=" sticky-top navbar-expand-sm p-2" >
+        <div class="main-nav">
+            <ul class="nav nav-tabs sticky-top justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link " href="books"> <strong> Books </strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="users"> <strong> Members </strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('list_issue_book')}}"><strong> Transactions</strong> </a>
+                </li>
+                {% if session['userid'] %}
+			<li class="nav-item">
+                <a class="nav-link" href="#"><strong> {{session.name}} </strong> </a>
+			</li>
+			<li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}"><strong> Logout </strong> </a>
+			</li>
+		     {% else %}
+			<li class="nav-item">
+                <a class="nav-link" href="login"><strong> Login </strong> </a>
+			</li>
+		     {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+  
